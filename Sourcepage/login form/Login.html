@@ -1,77 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="/Sourcepage/login form/login.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <title>E-CartNova</title>
-  </head>
+    <link rel="stylesheet" href="login.css" />
+    <!-- Using the same Font Awesome kit as the main site -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Login / Sign Up - CartNova</title>
+</head>
 <body>
-  <div class="container" id="container">
-    <div class="form-container sign-up-container">
-      <form id="signupForm">
-        <h1>Create Account</h1>
-        <div class="input-box">
-          <input type="text" placeholder="Name" name="name" required>
-          <i class='bx bxs-user'></i>
+    <a href="/" class="home-link" title="Back to Homepage">
+        <img src="/Image/CartNova-Logo.png" alt="CartNova Logo">
+    </a>
+    <div class="container" id="container">
+        <!-- SIGN UP CONTAINER -->
+        <div class="form-container sign-up-container">
+            <form id="signupForm">
+                <h1>Create Account</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Name" name="name" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Email" name="email" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" name="password" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Confirm Password" name="confirmPassword" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <!-- Container for error/success messages -->
+                <div class="form-message"></div>
+                <button type="submit" class="btn">Sign Up</button>
+                <p class="mobile-switch">Already have an account? <a href="#" id="showSignInMobile">Login</a></p>
+            </form>
         </div>
-        <div class="input-box">
-          <input type="email" placeholder="Email" name="email" required>
-          <i class='bx bxs-envelope'></i>
+
+        <!-- LOGIN CONTAINER -->
+        <div class="form-container sign-in-container">
+            <form id="loginForm">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="email" placeholder="Email" name="email" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" name="password" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <a href="#" class="forgot">Forgot your password?</a>
+                <!-- Container for error/success messages -->
+                <div class="form-message"></div>
+                <button type="submit" class="btn">Login</button>
+                <p class="mobile-switch">Don't have an account? <a href="#" id="showSignUpMobile">Sign Up</a></p>
+            </form>
         </div>
-        <div class="input-box">
-          <input type="password" placeholder="Password" name="password" required>
-          <i class='bx bxs-lock-alt'></i>
+
+        <!-- OVERLAY -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To stay connected, please login with your personal info</p>
+                    <button class="ghost" id="signIn">Login</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your details and start your journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
         </div>
-        <div class="input-box">
-          <input type="password" placeholder="Confirm Password" name="confirmPassword" required>
-          <i class='bx bxs-lock-alt'></i>
-        </div>
-        <button type="submit" class="btn">Sign Up</button>
-      </form>
     </div>
 
-    <div class="form-container sign-in-container">
-      <form id="loginForm">
-        <h1>Login</h1>
-        <div class="input-box">
-          <input type="email" placeholder="Email" name="email" required>
-          <i class='bx bxs-envelope'></i>
-        </div>
-        <div class="input-box">
-          <input type="password" placeholder="Password" name="password" required>
-          <i class='bx bxs-lock-alt'></i>
-        </div>
-        <a href="#" class="forgot">Forgot your password?</a>
-        <button type="submit" class="btn">Login</button>
-      </form>
-    </div>
-
-    <div class="overlay-container">
-      <div class="overlay">
-        <div class="overlay-panel overlay-left">
-          <h1>Welcome Back!</h1>
-          <p>To stay connected, please login with your info</p>
-          <button class="ghost" id="signIn">Login</button>
-        </div>
-        <div class="overlay-panel overlay-right">
-          <h1>Hello, Friend!</h1>
-          <p>Enter your details and start your journey with us</p>
-          <button class="ghost" id="signUp">Sign Up</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="/Sourcepage/login form/login.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
