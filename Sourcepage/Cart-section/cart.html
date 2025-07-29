@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/Sourcepage/Cart-section/cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>CartNova</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <img src="/Image/CartNova-Logo.png" alt="CartNova Logo" />
+          <span class="logo-text">CartNova</span>
+        </div>
+
+        <div class="input-container">
+          <input type="text" placeholder="Search products..." />
+          <button>Search</button>
+        </div>
+
+        <div class="nav-links">
+          <a class="nav-item" href="/index.html"><i class="fa-solid fa-house"></i> Home</a>
+          <a class="nav-item" href="/Sourcepage/Cart-section/cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart </a>
+          <a class="nav-item" href="/Sourcepage/Fav-section/favourite.html"><i class="fa-solid fa-heart"></i> Favourite</a>
+          <a class="nav-item" href="#About-section"><i class="fa-solid fa-circle-info"></i> About</a>
+          <a class="nav-item login" href="/Sourcepage/login form/Login.html">Login</a>
+        </div>
+      </div>
+    </header>
+
+<!-- CART PAGE SECTION -->
+<section class="cart-section">
+  <h2 class="cart-title"><i class="fa-solid fa-cart-shopping"></i> Your Cart</h2>
+
+  <div class="cart-container">
+    <!-- Sample Cart Item -->
+    <div class="cart-item">
+      <img src="/Image/iphone 16 pr max.png" alt="Product Image" class="cart-item-img" />
+      <div class="cart-item-details">
+        <h3>iPhone 16 Pro Max</h3>
+        <p>Price: ₹1,49,999</p>
+        <div class="quantity-control">
+          <button class="qty-btn">-</button>
+          <input type="number" value="1" min="1" class="qty-input" />
+          <button class="qty-btn">+</button>
+        </div>
+      </div>
+      <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+    </div>
+
+    <!-- Repeat More Cart Items Below -->
+    <div class="cart-item">
+      <img src="/Image/headphone.png" alt="Product Image" class="cart-item-img" />
+      <div class="cart-item-details">
+        <h3>Bluetooth Headphones</h3>
+        <p>Price: ₹4,999</p>
+        <div class="quantity-control">
+          <button class="qty-btn">-</button>
+          <input type="number" value="2" min="1" class="qty-input" />
+          <button class="qty-btn">+</button>
+        </div>
+      </div>
+      <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+    </div>
+  </div>
+
+  <!-- Cart Summary -->
+  <div class="cart-summary">
+    <h3>Total: ₹1,59,997</h3>
+    <button class="checkout-btn">Proceed to Checkout</button>
+  </div>
+</section>
+
+<footer>
+  <div class="Footer-bar">
+    <div class="footer-container">
+<!-- ABOUT SECTION -->
+<section class="about-section" id="About-section" >
+  <div class="about-container">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        Welcome to <strong>CartNova</strong> — your go-to destination for gadgets, appliances, and trendy tech!<br><br>
+        We aim to blend cutting-edge products with cartoonish fun, making your shopping experience lively, vibrant, and memorable.<br><br>
+        From smartphones to smart homes, our goal is to provide the best quality with a touch of playful creativity!
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="/Image/Cartnova.avif" alt="Cartoon style online shop illustration" />
+    </div>
+  </div>
+</section>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 CartNova. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/Sourcepage/Cart-section/cart.js"></script>
+
+  </body>
+</html>
