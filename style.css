@@ -921,9 +921,12 @@ main {
     justify-content: space-between;
     align-items: center;
     row-gap: 1rem;
-    
     /* UPDATED: Hides the bottom border line on mobile */
     border-bottom: none; 
+  }
+
+  .logo-text {
+    display: none !important;
   }
 
 
