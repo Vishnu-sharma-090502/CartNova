@@ -131,3 +131,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initial Render
     renderFavourites();
 });
+// --- NAVBAR SCRIPT ---
+// This code makes the hamburger menu work
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+hamburgerMenu.addEventListener('click', () => {
+    // Toggle 'active' class on both the hamburger and the nav links container
+    hamburgerMenu.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});

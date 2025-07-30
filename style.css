@@ -62,6 +62,7 @@ header {
   gap: 1rem;
   transition: all 0.3s ease-in-out;
   box-shadow: var(--shadow-subtle);
+  position: relative; 
 }
 
 /* Scrolled state for the header */
@@ -123,6 +124,41 @@ header.scrolled .logo img {
 .input-container button:hover {
   background-color: var(--hover-yellow);
 }
+/* --- START: ADDITIONS & FIXES FOR RESPONSIVE NAVBAR --- */
+
+/* HAMBURGER MENU STYLES */
+.hamburger-menu {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger-menu span {
+  width: 30px;
+  height: 3px;
+  background-color: var(--text-light);
+  border-radius: 5px;
+  transition: all 0.3s linear;
+}
+
+/* Hamburger animation to 'X' */
+.hamburger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
 
 /* NAV LINKS */
 .nav-links {
@@ -844,4 +880,135 @@ main {
 @media (max-width: 768px) {
   .navbar { flex-direction: column; gap: 1rem; border-radius: var(--border-radius-main); }
   .about-container { flex-direction: column; }
+}
+/* ================================================= */
+/* START: FINAL & CORRECTED RESPONSIVE SECTION       */
+/* ================================================= */
+
+
+/* HAMBURGER MENU STYLES (No changes needed) */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+
+.hamburger-menu span {
+  width: 30px;
+  height: 3px;
+  background-color: var(--text-light);
+  border-radius: 5px;
+  transition: all 0.3s linear;
+}
+
+
+.hamburger-menu.active span:nth-child(1) { transform: rotate(45deg) translate(7px, 7px); }
+.hamburger-menu.active span:nth-child(2) { opacity: 0; }
+.hamburger-menu.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+
+/* --- Main Responsive Rules for Final Header Layout --- */
+@media (max-width: 992px) {
+  .navbar {
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 1rem;
+    
+    /* UPDATED: Hides the bottom border line on mobile */
+    border-bottom: none; 
+  }
+
+
+  /* Logo takes the top-left position */
+  .logo {
+    order: 1;
+  }
+
+
+  /* Hamburger menu takes the top-right position */
+  .hamburger-menu {
+    order: 3;
+    display: flex; /* Ensures the hamburger menu is visible */
+    margin-left: auto;
+  }
+
+
+  /* Search bar moves to the second row and is centered */
+  .input-container {
+    order: 3;
+    flex-basis: 100%;
+    width: 90%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* The original nav links container is now positioned absolutely for the dropdown */
+  .nav-links {
+    order: 4;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    right: 0;
+    background-color: var(--primary-blue);
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.5rem 0.7rem 0;
+    border: 3px solid var(--border-color);
+    border-radius: var(--border-radius-main);
+    box-shadow: var(--shadow-subtle);
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+  }
+  
+  /* Reveal the dropdown menu when active */
+  .nav-links.active {
+    max-height: 500px;
+    padding: 2rem 0;
+  }
+
+
+  /* Hide individual nav items by default */
+  .nav-links .nav-item {
+      display: none;
+  }
+
+
+  /* Force ALL nav items to display inside the active dropdown */
+  header .nav-links.active .nav-item {
+    display: block; 
+    width: 90%;
+    text-align: center;
+  }
+  
+  .product-card--featured { 
+    grid-column: span 1; 
+    flex-direction: column; 
+  }
+}
+
+
+@media (max-width: 768px) {
+.navbar {
+    flex-direction: row;
+    align-items: center;
+    }
+
+
+  .about-container { 
+    flex-direction: column; 
+  }
 }

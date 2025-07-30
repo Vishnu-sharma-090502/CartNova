@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Favourites - CartNova</title>
+    <title>CartNova</title>
     <!-- We will use a new CSS file for this page -->
     <link rel="stylesheet" href="favourite.css" />
     <!-- Use the same Font Awesome kit -->
@@ -13,25 +13,23 @@
     <!-- Consistent Header from main site -->
     <header>
         <div class="navbar">
-            <div class="logo">
-                <img src="/Image/CartNova-Logo.png" alt="CartNova Logo" />
-                <span class="logo-text">CartNova</span>
-            </div>
-            <div class="input-container">
-                <input type="text" placeholder="Search products..." />
-                <button aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
+            <div class="logo"><img src="/Image/CartNova-Logo.png" alt="CartNova Logo" /><span class="logo-text">CartNova</span></div>
+            <div class="input-container"><input type="text" placeholder="Search modern tech..." /><button aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button></div>
+            <button class="hamburger-menu" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>        
             <div class="nav-links">
                 <a class="nav-item" href="/index.html"><i class="fa-solid fa-house"></i> Home</a>
                 <a class="nav-item" href="/Sourcepage/Cart-section/cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
-                <!-- The 'active' class highlights the current page -->
-                <a class="nav-item active" href="#"><i class="fa-solid fa-heart"></i> Favourite</a>
+                <a class="nav-item" href="/Sourcepage/Fav-section/favourite.html"><i class="fa-solid fa-heart"></i> Favourite</a>
                 <a class="nav-item" href="#about-section"><i class="fa-solid fa-circle-info"></i> About</a>
                 <a class="nav-item login" href="/Sourcepage/login form/Login.html">Login</a>
             </div>
         </div>
     </header>
-
+    
     <main>
         <div class="fav-page-container">
             <h1>Your Favourite Items</h1>
